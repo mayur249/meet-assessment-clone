@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@material-ui/core";
+import React from "react";
+import BottomBar from "./components/BottomBar";
+import Cards from "./components/Cards";
+import UserInfoCard from "./components/UserInfoCard";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid>
+        <Grid item>
+          <Cards />
+        </Grid>
+        <Grid item>
+          <BottomBar />
+        </Grid>
+      </Grid>
     </div>
   );
-}
+};
 
 export default App;
